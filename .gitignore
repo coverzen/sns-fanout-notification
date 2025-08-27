@@ -1,0 +1,7 @@
+.php-cs-fixer.cache
+.phpcs-cache
+.phpmd.result-cache.php
+.phpstan.cache
+.phpunit.cache
+composer.lock
+vendor
