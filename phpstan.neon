@@ -1,0 +1,21 @@
+parameters:
+    paths:
+        - src
+        - tests
+
+    # The level 10 is the highest level
+    level: 10
+    excludePaths:
+    tmpDir: ./.phpstan.cache
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+       -
+           message: '#return type has no value type specified in iterable type Aws\\Result\.#'
+       -
+           messages:
+                - '#.* does not accept Mockery\\MockInterface#'
+                - '#Call to an undefined method Coverzen\\Components\\SnsFanoutNotification\\.*::expects\(\)#'
+                - '#Call to an undefined method Aws\\Sns\\SnsClient::shouldReceive\(\)#'
+                - '#Cannot call method (atLeast|once|with|andReturn)\(\) on mixed#'
+           path: tests/Unit/*.php
