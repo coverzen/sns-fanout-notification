@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Event;
 
 final class SnsFanoutChannel
 {
-    public function __construct(protected SnsFanout $snsFanout)
+    public function __construct(private SnsFanout $snsFanout)
     {
     }
 
@@ -52,7 +52,7 @@ final class SnsFanoutChannel
      * @throws CouldNotSendNotification
      * @return SnsFanoutMessage
      */
-    protected function getMessage(mixed $notifiable, Notification $notification): SnsFanoutMessage
+    private function getMessage(mixed $notifiable, Notification $notification): SnsFanoutMessage
     {
         /** @var SnsFanoutMessage|array<string, mixed>|null $message */
         /* @phpstan-ignore method.notFound */

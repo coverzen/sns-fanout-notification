@@ -13,7 +13,7 @@ final class SnsFanout
      *
      * @param SnsClient $sns
      */
-    public function __construct(protected SnsClient $sns)
+    public function __construct(private SnsClient $sns)
     {
     }
 

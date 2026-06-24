@@ -19,7 +19,7 @@ final class SnsFanoutNotificationServiceProvider extends ServiceProvider
         /* @phpstan-ignore argument.type */
         $this->app->bind(SnsFanout::class, fn () => new SnsFanout($this->app->make(SnsService::class)));
 
-        $this->app->bind(SnsService::class, function () {
+        $this->app->bind(SnsService::class, static function () {
             /** @var array<string, mixed> $config */
             $config = [
                 'version' => 'latest',

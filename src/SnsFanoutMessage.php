@@ -18,9 +18,9 @@ final class SnsFanoutMessage
      * @param array<array-key, mixed> $attributes
      */
     public function __construct(
-        protected array $body = [],
-        protected string $topic = '',
-        protected array $attributes = [],
+        private array $body = [],
+        private string $topic = '',
+        private array $attributes = [],
     ) {
     }
 

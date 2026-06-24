@@ -18,4 +18,5 @@ parameters:
                 - '#Call to an undefined method Coverzen\\Components\\SnsFanoutNotification\\.*::expects\(\)#'
                 - '#Call to an undefined method Aws\\Sns\\SnsClient::shouldReceive\(\)#'
                 - '#Cannot call method (atLeast|once|with|andReturn)\(\) on mixed#'
+                - '#Return type of call to method .*::partialMock\(\) contains unresolvable type#'
            path: tests/Unit/*.php
